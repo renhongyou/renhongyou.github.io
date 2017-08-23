@@ -24,9 +24,9 @@ public class HelloWorldServlet extends HttpServlet{
 			String headerName = headers.nextElement();
 			System.out.println(headerName + " : " + req.getHeader(headerName));
 		}
-//		resp.setContentType("text/html");
-//		resp.setCharacterEncoding("GBK");
-//		resp.getWriter().print("用户名：<input/>");
+		resp.setContentType("text/html");
+		resp.setCharacterEncoding("UTF-8");
+		resp.getWriter().print("用户名：<input/>");
 		
 		//请求转发和重定向
 		

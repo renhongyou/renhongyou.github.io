@@ -98,4 +98,16 @@
   <listener>
   	<listener-class>org.lanqiao.study.web.listener.AttributeListener</listener-class>
   </listener>
+  <listener>
+  	<listener-class>org.lanqiao.study.web.listener.ContextListener</listener-class>
+  </listener>
+  
+  <servlet>
+  	<servlet-name>TableViewServlet</servlet-name>
+  	<servlet-class>org.lanqiao.study.web.servlet.TableViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TableViewServlet</servlet-name>
+  	<url-pattern>/table.do</url-pattern>
+  </servlet-mapping>
 </web-app>
