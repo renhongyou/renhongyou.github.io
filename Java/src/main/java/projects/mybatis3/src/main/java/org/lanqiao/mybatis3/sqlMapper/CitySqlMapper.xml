@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lanqiao.mybatis3.dao.ICityDao">
+
+  <resultMap type="org.lanqiao.mybatis3.entity.City" id="city" autoMapping="true">
+  	<id column="id" property="id" />
+  	<association property="country" autoMapping="true" javaType="org.lanqiao.mybatis3.entity.Country"></association>
+  </resultMap>
+  <select id="selectByEntity" resultMap="city">
+    select c.id, c.name, c.countrycode, c.district, c.population from city c
+    <where>
+    	<if test="null != id">
+    		and id = #{id}
+    	</if>
+    	<if test="null != name">
+    		and name = #{name}
+    	</if>
+    	<if test="null != countryCode">
+    		and countrycode = #{countryCode}
+    	</if>
+    	<if test="null != district">
+    		and district = #{district}
+    	</if>
+    	<if test="null != population">
+    		and population = #{population}
+    	</if>    	
+     </where>
+  </select>
+
+  <select id="selectWithCode" resultMap="city">
+  	select * from city c
+	left join country coun
+	on c.countrycode = coun.code
+  </select>
+
+</mapper>
