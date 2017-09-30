@@ -17,12 +17,12 @@ class TreeNode {
  */
 public class Question04 {
     /**
-     * 思路：递归。
+     * 递归。
      * @param pre
      * @param in
      * @return root for whole
      */
-    public TreeNode solution(int[] pre, int[] in) {
+    public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
         try {
             if (pre.length != in.length) {
                 return null;

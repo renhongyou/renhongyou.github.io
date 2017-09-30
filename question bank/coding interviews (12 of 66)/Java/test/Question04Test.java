@@ -12,7 +12,7 @@ public class Question04Test {
         Question04 instance = new Question04();
         
         int[] test = {};
-        TreeNode root = instance.solution(test, test);
+        TreeNode root = instance.reConstructBinaryTree(test, test);
         
         assertEquals(root, null);
         
@@ -20,7 +20,7 @@ public class Question04Test {
         int[] pre = { 1, 2, 3, 4, 5, 6, 7 };
         int[] answer = { 1, 2, 5, 3, 4, 6, 7 };
         
-        root = instance.solution(pre, in);
+        root = instance.reConstructBinaryTree(pre, in);
         int[] result = { root.val, root.left.val, root.right.val, root.left.left.val, 
                 root.left.right.val, root.right.left.val, root.right.right.val };
                

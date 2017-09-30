@@ -8,12 +8,11 @@ package org.logwing.harvey.questionbank.codinginterviews;
  */
 public class Question02 {
     /**
-     * 思路一：<br>
-     * 考虑Java中的replace方法
+     * 考虑API
      * @param str
      * @return result
      */
-    public String solution01(StringBuffer str) {
+    public String replaceSpace01(StringBuffer str) {
         try {
             return str.toString().replaceAll(" ", "%20");
         } catch (NullPointerException e) {
@@ -22,14 +21,13 @@ public class Question02 {
     }
     
     /**
-     * 思路二：<br>
      * 不考虑replaceAll，那么如何替换才更有效率：<br>
      * 从前往后替换，后面的字符需要不断往后移动，并且需要多次移动，效率低下；<br>
      * 从后往前，先计算需要多少空间，然后从后往前移动，每个字符只需要移动一次，效率相对较高。
      * @param str
      * @return result
      */
-    public String solution02(StringBuffer str) {
+    public String replaceSpace02(StringBuffer str) {
         try {
             int spaceNum = 0;
             for (int i = 0; i < str.length(); i++) {

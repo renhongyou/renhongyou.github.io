@@ -8,13 +8,12 @@ package org.logwing.harvey.questionbank.codinginterviews;
  */
 public class Question01 {
     /**
-     * 思路一：<br>
      * 把每一行看成有序递增的数组，利用二分查找，通过遍历每一行得到答案，时间复杂度为nlogn。
      * @param array 二位整型数组
      * @param target 目标整数
      * @return true/false
      */
-    public boolean solution01(int[][] array, int target) {
+    public boolean find01(int[][] array, int target) {
         if (array == null) {
             return false;
         }
@@ -36,7 +35,6 @@ public class Question01 {
     }
     
     /**
-     * 思路二：<br>
      * 利用二维数组由上到下，由左到右递增的规律，选取右上角或者左下角的元素a[row][col]与target进行比较：<br>
      * 当target小于元素a[row][col]时，那么target必定在元素a所在行的左边，col--；<br>
      * 当target大于元素a[row][col]时，那么target必定在元素a所在列的下边，row++。
@@ -44,7 +42,7 @@ public class Question01 {
      * @param target 目标整数
      * @return true/false
      */
-    public boolean solution02(int[][] array, int target) {
+    public boolean find02(int[][] array, int target) {
         if (array == null || array.length == 0) {
             return false;
         }

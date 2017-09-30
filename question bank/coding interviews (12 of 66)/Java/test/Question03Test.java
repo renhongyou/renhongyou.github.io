@@ -17,7 +17,7 @@ public class Question03Test {
         ListNode listNode = null;
         ArrayList<Integer> result = new ArrayList<Integer>();
         
-        assertEquals(result, instance.solution(listNode));
+        assertEquals(result, instance.printListFromTailToHead(listNode));
 
         listNode = new ListNode(1);
         listNode.next = new ListNode(2);
@@ -26,7 +26,7 @@ public class Question03Test {
         listNode.next.next.next.next = new ListNode(5);
         result = new ArrayList<Integer>(Arrays.asList(5, 4, 3, 2, 1));
 
-        assertEquals(result, instance.solution(listNode));
+        assertEquals(result, instance.printListFromTailToHead(listNode));
         
     }
 

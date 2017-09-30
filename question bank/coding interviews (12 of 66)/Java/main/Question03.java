@@ -19,13 +19,13 @@ class ListNode {
 public class Question03 {
     static ArrayList<Integer> arrayList = new ArrayList<Integer>();
     /**
-     * 思路：递归。
+     * 递归。
      * @param listNode
      * @return 反向链表
      */
-    public ArrayList<Integer> solution(ListNode listNode) {
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         if (listNode != null) {
-            this.solution(listNode.next);
+            this.printListFromTailToHead(listNode.next);
             arrayList.add(listNode.val);
         }
         return arrayList;

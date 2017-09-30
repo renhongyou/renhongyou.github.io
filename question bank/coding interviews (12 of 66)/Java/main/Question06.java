@@ -10,7 +10,6 @@ package org.logwing.harvey.questionbank.codinginterviews;
  */
 public class Question06 {
     /**
-     * 思路：<br>
      * 由于数组是非递减排序，所以可能存在重复的情况，此时使用变相二分查找解题会不严谨。<br>
      * 顺序遍历数组，寻找分界点，分界点前后都是非递减数组，考虑后一个数比前一个数小的可能性：<br>
      * 如果出现，这个数就是最小值；<br>
@@ -19,7 +18,7 @@ public class Question06 {
      * @param array
      * @return min or 0
      */
-    public int result(int[] array) {
+    public int minNumberInRotateArray(int[] array) {
         if (array == null || array.length == 0) {
             return 0;
         }

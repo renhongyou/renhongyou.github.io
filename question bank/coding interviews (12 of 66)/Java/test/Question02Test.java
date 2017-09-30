@@ -14,20 +14,20 @@ public class Question02Test {
         StringBuffer str = new StringBuffer("hello world");
         String result = "hello%20world";
         
-        assertEquals(result, instance.solution01(str));
-        assertEquals(result, instance.solution02(str));
+        assertEquals(result, instance.replaceSpace01(str));
+        assertEquals(result, instance.replaceSpace02(str));
         
         str = new StringBuffer("");
         result = "";
         
-        assertEquals(result, instance.solution01(str));
-        assertEquals(result, instance.solution02(str));
+        assertEquals(result, instance.replaceSpace01(str));
+        assertEquals(result, instance.replaceSpace02(str));
         
         str = null;
         result = null;
         
-        assertEquals(result, instance.solution01(str));
-        assertEquals(result, instance.solution02(str));
+        assertEquals(result, instance.replaceSpace01(str));
+        assertEquals(result, instance.replaceSpace02(str));
         
     }
 

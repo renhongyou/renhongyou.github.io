@@ -1,7 +1,5 @@
 package org.logwing.harvey.questionbank.codinginterviews;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class Question01Test {
@@ -21,14 +19,14 @@ public class Question01Test {
         int arrayNull[][] = null;
         int target = 7;
         
-        assertEquals(true, instance.solution01(array, target));
-        assertEquals(true, instance.solution02(array, target));
+        assert(instance.find01(array, target));
+        assert(instance.find02(array, target));
         
-        assertEquals(false, instance.solution01(arrayEmpty, target));
-        assertEquals(false, instance.solution02(arrayEmpty, target));
+        assert(!instance.find01(arrayEmpty, target));
+        assert(!instance.find02(arrayEmpty, target));
         
-        assertEquals(false, instance.solution01(arrayNull, target));
-        assertEquals(false, instance.solution02(arrayNull, target));
+        assert(!instance.find01(arrayNull, target));
+        assert(!instance.find02(arrayNull, target));
         
     }
 

@@ -16,10 +16,10 @@ public class Question06Test {
         int[] arrayEmpty = {};
         int[] arrayNull = null;
         
-        assertEquals(2, instance.result(array));
-        assertEquals(6, instance.result(arraySame));
-        assertEquals(0, instance.result(arrayEmpty));
-        assertEquals(0, instance.result(arrayNull));
+        assertEquals(2, instance.minNumberInRotateArray(array));
+        assertEquals(6, instance.minNumberInRotateArray(arraySame));
+        assertEquals(0, instance.minNumberInRotateArray(arrayEmpty));
+        assertEquals(0, instance.minNumberInRotateArray(arrayNull));
     }
 
 }
