@@ -2,14 +2,7 @@ package org.logwing.harvey.questionbank.codinginterviews;
 
 import java.util.ArrayList;
 
-class ListNode {
-    public int val;
-    public ListNode next = null;
-    
-    ListNode(int val) {
-        this.val = val;
-    }
-}
+import org.logwing.harvey.questionbank.helper.ListNode;
 
 /**
  * 输入一个链表，从尾到头打印链表每个节点的值。

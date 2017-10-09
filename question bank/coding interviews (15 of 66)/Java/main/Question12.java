@@ -7,7 +7,7 @@ package org.logwing.harvey.questionbank.codinginterviews;
  */
 public class Question12 {
     /**
-     * 
+     * 全面考察指数的正负、底数是否为0的情况。
      * @param base
      * @param exponent
      * @return base^exponent
@@ -15,10 +15,10 @@ public class Question12 {
     public double power(double base, int exponent) {
         double result = 1;
         double current = base;
-        int n = exponent;
-        if (n > 0) {
+        int n;
+        if (exponent > 0) {
             n = exponent;
-        } else if (n < 0) {
+        } else if (exponent < 0) {
             if (base == 0) {
                 throw new RuntimeException("分母为零");
             }
@@ -33,6 +33,6 @@ public class Question12 {
             current *= current;
             n >>= 1;
         }
-        return n > 0 ? result : (1 / result);
+        return exponent > 0 ? result : (1 / result);
     }
 }

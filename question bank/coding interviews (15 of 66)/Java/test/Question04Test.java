@@ -3,6 +3,7 @@ package org.logwing.harvey.questionbank.codinginterviews;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.logwing.harvey.questionbank.helper.TreeNode;
 
 public class Question04Test {
 
